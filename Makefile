@@ -1,10 +1,10 @@
-PROG = paint
+PROG = paintcoloured
 SRC = ${PROG}.c
 OBJ = ${SRC:.c=.o}
 
 CC = cc
-INCS = -I/usr/include/X11
-LIBS = -L/usr/X11R6/lib -lX11
+INCS = -I/usr/include/X11 `pkg-config --cflags xft`
+LIBS = -L/usr/X11R6/lib -lX11 -lXft
 
 LDFLAGS = ${LIBS}
 CFLAGS = -Wall -Wextra -O0 ${INCS}
