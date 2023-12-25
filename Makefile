@@ -1,4 +1,4 @@
-PROG = paintcoloured
+PROG = paintcolouredwindows
 SRC = ${PROG}.c
 OBJ = ${SRC:.c=.o}
 
